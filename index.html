@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Example</title>
+
+</head>
+
+<body>
+
+    <h2>Registration</h2>
+    <form onsubmit="event.preventDefault(); register({email: this.email.value, password: this.password.value})">
+        Email: <input type="email" name="email" required><br>
+        Password: <input type="password" name="password" required><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <h2>Login</h2>
+    <form onsubmit="event.preventDefault(); login(this.email.value, this.password.value)">
+        Email: <input type="email" name="email" required><br>
+        Password: <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
