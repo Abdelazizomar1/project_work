@@ -1,5 +1,3 @@
-// Your JavaScript code here
-
 const UK = "USERS";
 
 function getUsers() {
