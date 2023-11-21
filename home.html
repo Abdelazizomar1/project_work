@@ -4,10 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <h1>hellooooooo</h1>
+
+    <!-- <h2>Scegli un Supermercato</h2>
+        <select id="marketSelect"> -->
+    <!-- Opzioni del supermercato simulate -->
+    <!-- <option value="1">Supermarket 1 - Mini-Market</option>
+            <option value="2">Supermarket 2 - Market</option>
+            <option value="3">Supermarket 3 - Megastore</option>
+        </select> -->
+    
+    <h2>Effettua una Prenotazione</h2>
+    <form id="reservationForm">
+        <label for="marketSelect">Scegli un Supermercato</label>
+        <select id="marketSelect">
+            <!-- Opzioni del supermercato simulate -->
+            <option value="1">Supermarket 1 - Mini-Market</option>
+            <option value="2">Supermarket 2 - Market</option>
+            <option value="3">Supermarket 3 - Megastore</option>
+        </select>
+    
+        <label for="productCode">Seleziona un Prodotto:</label>
+        <select id="productCode" required>
+            <option value="carne">Carne - €5.00</option>
+            <option value="latte">Latte - €2.00</option>
+            <option value="pasta">Pasta - €1.50</option>
+            <!-- Aggiungi altre opzioni secondo necessità -->
+        </select>
+    
+        <label for="quantity">Quantità:</label>
+        <input type="number" id="quantity" required>
+    
+        <label for="pickupDate">Data di Ritiro:</label>
+        <input type="date" id="pickupDate" required>
+    
+        <label for="pickupTime">Ora di Ritiro:</label>
+        <input type="time" id="pickupTime" required>
+    
+        <button type="button" onclick="makeReservation()">Prenota</button>
+    </form>
+    
+    <!-- <h2>Elenco Prenotazioni</h2>
+        <ul id="reservationList"></ul>
+        <p id="totalCost">Totale: €0.00</p> -->
+    
+    <h2>Elenco Prenotazioni</h2>
+    <table id="reservationTable">
+        <thead>
+            <tr>
+                <th>Codice Prenotazione</th>
+                <th>Prodotto</th>
+                <th>Quantità</th>
+                <th>Orario Ritiro</th>
+                <th>Costo</th>
+            </tr>
+        </thead>
+        <tbody id="reservationList"></tbody>
+    </table>
+    
+    <p id="totalCost">Totale: €0.00</p>
+
+    <button class="btn" onclick="downloadReservations()">Download Reservations</button>
 
 
 
@@ -15,8 +74,8 @@
 
 
 
-
-    <script src="app.js"></script>
+    <script src="prenotazione.js"></script>
+    <!-- <script src="app.js"></script> -->
 
 </body>
 </html>

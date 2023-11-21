@@ -28,17 +28,42 @@ function register(user) {
   window.location.href = "login.html";
 }
 
-function login(email, password) {
+// function login(email, password) {
+//   let users = getUsers();
+//   // let i = users.findIndex((u) => u.email === email && u.password === password);
+//   // let i = users.findIndex((u) => (u.email === identifier || u.id === identifier) && u.password === password);
+//   let i = users.findIndex((u) => (u.email === identifier || (u.id && u.id === identifier)) && u.password === password);
+
+// function login(emailOrId, password) {
+//   let users = getUsers();
+//   let i = users.findIndex((u) => (u.email === emailOrId || (u.id && u.id === emailOrId)) && u.password === password);
+
+// if (i === -1) {
+//   // Incorrect email or password, show an error or handle accordingly
+//   alert("Incorrect email or password.");
+//   return;
+// }
+
+function login(email, password, id) {
   let users = getUsers();
-  let i = users.findIndex((u) => u.email === email && u.password === password);
+  let i = users.findIndex((u) => (u.email === email || (u.id && u.id === id)) && u.password === password);
 
   if (i === -1) {
-    // Incorrect email or password, show an error or handle accordingly
-    alert("Incorrect email or password.");
+    // Incorrect email, ID, or password, show an error or handle accordingly
+    alert("Incorrect email, ID, or password.");
     return;
-  }
+}
 
   alert("Login successful!");
   // Redirect to home or another page
   window.location.href = "home.html";
 }
+
+
+
+
+
+
+
+
+

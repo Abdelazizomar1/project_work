@@ -10,12 +10,30 @@
 
 <body>
     <div class="auth-container"> 
-    <h2>Login</h2>
-    <form onsubmit="event.preventDefault(); login(this.email.value, this.password.value)">
+    <!-- <h2>Login</h2> -->
+    <!-- <form onsubmit="event.preventDefault(); login(this.email.value, this.password.value)">
         Email: <input type="email" name="email" required><br>
         Password: <input type="password" name="password" required><br>
         <button type="submit">Login</button>
+    </form> -->
+
+    <!-- <h2>Login</h2>
+    <form class="auth-form" onsubmit="event.preventDefault(); login(this.identifier.value, this.password.value)">
+        Email or ID: <input type="text" name="identifier" required><br>
+        Password: <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form> -->
+
+    <h2>Login</h2>
+    <form class="auth-form" onsubmit="event.preventDefault(); login(this.email.value, this.password.value, this.id.value)">
+        Email: <input type="email" name="email" required><br>
+        Password: <input type="password" name="password" required><br>
+        ID: <input type="text" name="id" required><br>
+        <button type="submit">Login</button>
     </form>
+
+
+
     </div>
 
     <script src="app.js"></script>
